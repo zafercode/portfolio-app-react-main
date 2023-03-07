@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 const Result = () => {
   return (
-    <p className="flex justify-center text-white">
+    <p className="flex justify-center text-xl text-white">
       Your message successfully sent. I will contact u soon.
     </p>
   );
