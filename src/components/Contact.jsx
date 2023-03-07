@@ -3,12 +3,12 @@ import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
 const Result = () => {
-  return(
-    <p>
+  return (
+    <p className="flex justify-center text-white">
       Your message successfully sent. I will contact u soon.
     </p>
   );
-}
+};
 
 const Contact = () => {
   const form = useRef();
@@ -19,7 +19,7 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_qdqdifj",
+        "service_2xdvgab",
         "template_azq4179",
         form.current,
         "Hz6_iK3dacWJZ8z0B"
@@ -43,6 +43,7 @@ const Contact = () => {
       className="w-full h-screen bg-[#0a192f] flex justify-center items-center p-4"
     >
       <form
+        ref={form}
         method="POST"
         onSubmit={sendEmail}
         action=""
@@ -87,9 +88,7 @@ const Contact = () => {
         <button className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
           Let's Contact
         </button>
-        <div className="row">
-          {result ? <Result /> : null} 
-        </div>
+        <div className="row">{result ? <Result /> : null}</div>
       </form>
     </div>
   );
