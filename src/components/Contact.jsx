@@ -72,7 +72,7 @@ const Contact = () => {
           required
         />
         <input
-          className="my-4 p-2 bg-[#ccd6f6]"
+          className="my-4 p-2 bg-[#ccd6f6] outline-none"
           type="number"
           placeholder="Phone number"
           name="number"
