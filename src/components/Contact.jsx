@@ -33,7 +33,7 @@ class Contact extends Component {
       });
     });
     // open the request with the verb and the url
-    xhr.open('GET', 'http://192.168.31.177/mail-api-react-active/contact-mail-api.php?email=' + email +
+    xhr.open('GET', 'https://zaferkalik.com/mail-api-react-active/contact-mail-api.php?email=' + email +
       '&name-surname=' + name +
       '&phone=' + phone +
       '&subject=' + subject +
@@ -94,6 +94,16 @@ class Contact extends Component {
               name="name"
               required
             />
+            <input
+              value={subject}
+              onChange={this.handleChange('subject')}
+              className="mt-4 p-2 bg-[#ccd6f6]"
+              type="subject"
+              placeholder="Subject"
+              name="subject"
+              required
+            />
+
             <input
               value={email}
               onChange={this.handleChange('email')}
